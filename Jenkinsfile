@@ -1,12 +1,12 @@
 pipeline {
-  agent { label 'linux' }
+  agent { label 'slave' }
   tools {
     maven 'maven_3.5.3'
   }
   stages {
     stage('checkout') {
       steps {
-        git 'https://github.com/effectivejenkins/myProject.git'
+        git 'https://github.com/derinbay/myProject.git'
       }
     }
     stage('Build') {
